@@ -13,13 +13,12 @@ Clothing::Clothing(const string& name, double price, int qty,
 set<string> Clothing::keywords() const
 {
     set<string> k = parseStringToWords(name_);
-    set<string> a = parseStringToWords(brand_);
-    k.insert(a.begin(), a.end());
-    k.insert(convToLower(isbn_));
+    set<string> b = parseStringToWords(brand_);
+    k.insert(b.begin(), b.end());
     return k;
 }
 
-string Book::displayString() const
+string Clothing::displayString() const
 {
     stringstream ss;
     ss << name_ << "\nSize: " << size_ << " BRAND: " << brand_ << "\n"
@@ -27,8 +26,8 @@ string Book::displayString() const
     return ss.str();
 }
 
-void Book::dump(ostream& os) const
+void Clothing::dump(ostream& os) const
 {
     Product::dump(os);
-    os << isbn_ << "\n" << author_ << endl;
+    os << size_ << "\n" << brand_ << endl;
 }
