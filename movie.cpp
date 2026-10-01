@@ -28,5 +28,5 @@ string Movie::displayString() const
 void Movie::dump(ostream& os) const
 {
     Product::dump(os);
-    os << isbn_ << "\n" << rating_ << endl;
+    os << genre_ << "\n" << rating_ << endl;
 }
