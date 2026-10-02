@@ -21,7 +21,7 @@ set<string> Clothing::keywords() const
 string Clothing::displayString() const
 {
     stringstream ss;
-    ss << name_ << "\nSize: " << size_ << " BRAND: " << brand_ << "\n"
+    ss << name_ << "\nSize: " << size_ << " Brand: " << brand_ << "\n"
        << fixed << setprecision(2) << price_ << " " << qty_ << " left.";
     return ss.str();
 }
