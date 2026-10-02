@@ -6,7 +6,7 @@ using namespace std;
 
 Movie::Movie(const string& name, double price, int qty,
            const string& genre, const string& rating)
-    : Product("book", name, price, qty), genre_(genre), rating_(rating)
+    : Product("movie", name, price, qty), genre_(genre), rating_(rating)
 {
 }
 
@@ -20,7 +20,7 @@ set<string> Movie::keywords() const
 string Movie::displayString() const
 {
     stringstream ss;
-    ss << name_ << "\nRating: " << rating_ << " GENRE: " << genre_ << "\n"
+    ss << name_ << "\nGenre: " << genre_ << " Rating: " << rating_ << "\n"
        << fixed << setprecision(2) << price_ << " " << qty_ << " left.";
     return ss.str();
 }
